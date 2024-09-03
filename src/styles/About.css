@@ -1,0 +1,60 @@
+#about {
+  background-color: #eaedef;
+  position: relative;
+  font-size: 1.2rem;
+  padding: 10px; /* Menambah padding untuk ruang di sekitar container */
+}
+
+#about > .about-container {
+  display: flex; /* Menggunakan Flexbox */
+  align-items: center; /* Vertikal center */
+  justify-content: center; /* Horizontal center */
+  margin: auto;
+  width: 90%; /* Memperbesar lebar container */
+  max-width: 1400px; /* Lebar maksimum container */
+  padding: 30px; /* Ruang di dalam container */
+}
+
+#about > .about-container > .box {
+  display: flex; /* Menggunakan Flexbox di dalam box */
+  align-items: center; /* Vertikal center */
+  background-color: #ffffff; /* Warna latar belakang kotak */
+  border-radius: 15px; /* Sudut melengkung kotak */
+  padding: 30px; /* Ruang di dalam kotak */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Efek bayangan kotak yang lebih besar */
+  width: 100%; /* Memastikan kotak mengambil lebar penuh container */
+}
+
+#about > .about-container > .box > .about-photo {
+  width: 390px; /* Ukuran foto yang lebih besar */
+  object-fit: cover; /* Menghindari distorsi gambar */
+  border-radius: 15px; /* Sudut melengkung pada foto */
+  margin-right: 30px; /* Jarak yang lebih besar antara foto dan teks */
+}
+
+#about > .about-container > .box > .about-text {
+  max-width: 600px; /* Lebar maksimum untuk teks yang lebih besar */
+}
+
+#about > .about-container > .box > p {
+  text-align: left; /* Teks di sebelah kiri */
+}
+
+@media only screen and (max-width: 1000px) {
+  #about > .about-container {
+    width: 100%; /* Lebar penuh pada layar kecil */
+  }
+
+  #about > .about-container > .box {
+    padding: 20px; /* Mengurangi padding pada layar kecil */
+  }
+
+  #about > .about-container > .box > .about-photo {
+    width: 100px; /* Mengurangi ukuran foto pada layar kecil */
+    height: 100px; /* Mengurangi ukuran foto pada layar kecil */
+  }
+
+  #about > .about-container > .box > .about-text {
+    max-width: 100%; /* Lebar maksimum teks penuh pada layar kecil */
+  }
+}

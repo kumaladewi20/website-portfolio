@@ -1,0 +1,113 @@
+nav {
+  background-color: #f8a2b5;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 40px; /* Atur tinggi navbar */
+  display: flex;
+  align-items: center; /* Vertikal tengah konten dalam navbar */
+}
+
+nav > .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; /* Padding kiri dan kanan untuk memastikan elemen tidak terlalu mepet */
+  position: relative; /* Menambahkan relative positioning untuk button jika diperlukan */
+}
+
+.menu {
+  flex: 1; /* Agar menu bisa mengambil sisa ruang yang ada */
+  display: flex; /* Menggunakan flexbox untuk mengatur item menu */
+  justify-content: flex-end; /* Menyusun menu di sebelah kanan */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+
+.menu > ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.menu > ul > li > a {
+  text-decoration: none;
+  color: #fff;
+  padding: 15px; /* Padding untuk membuat link lebih mudah diklik */
+}
+
+nav > .wrapper > button {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+}
+
+nav > .wrapper > button > svg {
+  color: #fff;
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .menu > ul {
+    display: none;
+  }
+
+  .menu.tampil > ul {
+    display: flex;
+    flex-direction: column; /* Mengubah display menjadi flex dengan kolom */
+  }
+
+  .menu {
+    text-align: right;
+  }
+
+  nav > .wrapper > button {
+    display: inline;
+  }
+
+  .menu > ul {
+    flex-direction: column;
+    background-color: #000;
+    width: 100%;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index: 101; /* Pastikan menu berada di atas elemen lainnya */
+  }
+
+  .menu > ul > li {
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .menu > ul > li > a {
+    display: inline-block;
+    padding: 15px 20px;
+    width: 100%;
+  }
+
+  .menu > ul > li > a:hover {
+    background-color: #222831;
+  }
+}
