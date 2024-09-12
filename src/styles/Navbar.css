@@ -49,7 +49,8 @@ nav > .wrapper {
 .menu > ul > li > a {
   text-decoration: none;
   color: #fff;
-  padding: 15px; /* Padding untuk membuat link lebih mudah diklik */
+  padding: 15px;
+  text-transform: capitalize; /* Hanya huruf pertama kapital */
 }
 
 nav > .wrapper > button {

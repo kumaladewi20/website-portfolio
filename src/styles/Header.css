@@ -1,27 +1,27 @@
 header {
   background-color: #fcece4;
-  height: 100vh; /* Mengatur tinggi header */
+  height: 100vh;
   background-position: center center;
   position: relative;
   font-family: "Poppins", sans-serif;
-  padding-top: 20px; /* Menambah ruang di atas header */
-  box-sizing: border-box; /* Termasuk padding dalam tinggi elemen */
+  padding-top: 20px;
+  box-sizing: border-box;
 }
 
 .header-jumbotron {
   display: flex;
-  flex-direction: row; /* Susun elemen secara horizontal */
-  justify-content: space-between; /* Pisahkan teks dan gambar */
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 0 20px; /* Tambahkan padding horizontal */
-  box-sizing: border-box; /* Termasuk padding dalam lebar elemen */
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .text-content {
   color: #fff;
-  max-width: 50%; /* Atur lebar maksimum konten teks */
+  max-width: 50%;
 }
 
 .header-jumbotron > img {
@@ -30,7 +30,7 @@ header {
 }
 
 .header-jumbotron > h2 {
-  margin: 0; /* Hapus margin default */
+  margin: 0;
   padding: 5px;
   font-size: 3.5rem;
   line-height: 4rem;
@@ -38,32 +38,57 @@ header {
 
 .header-jumbotron > p {
   padding: 5px;
-  margin: 10px 0; /* Atur margin atas dan bawah */
+  margin: 10px 0;
   font-size: 1.2rem;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: 2px solid transparent;
+  border-radius: 50px; /* Membuat tombol dengan sudut bulat */
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-3px); /* Memberikan sedikit efek hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek floating */
 }
 
 /* Media Query untuk layar kecil */
 @media only screen and (max-width: 1000px) {
   .header-jumbotron {
-    flex-direction: column; /* Susun elemen secara vertikal pada layar kecil */
+    flex-direction: column;
     align-items: center;
   }
 
   .header-jumbotron > img {
-    width: 250px; /* Sesuaikan ukuran gambar pada layar kecil */
-    margin: 20px 0; /* Atur margin untuk layar kecil */
+    width: 250px;
+    margin: 20px 0;
   }
 
   .text-content {
-    text-align: center; /* Pusatkan teks pada layar kecil */
+    text-align: center;
   }
 
   .header-jumbotron > h2 {
-    font-size: 2.5rem; /* Sesuaikan ukuran font pada layar kecil */
+    font-size: 2.5rem;
     line-height: 3rem;
   }
 
   .header-jumbotron > p {
-    font-size: 1rem; /* Sesuaikan ukuran font pada layar kecil */
+    font-size: 1rem;
+  }
+
+  .cv-button {
+    padding: 10px 20px; /* Mengurangi ukuran padding untuk layar kecil */
+    font-size: 0.9rem;
   }
 }

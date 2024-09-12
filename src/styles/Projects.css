@@ -1,11 +1,34 @@
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Memusatkan kontainer kartu di tengah */
+  padding: 20px;
+}
+
+h2 {
+  text-align: center; /* Mengatur teks ke tengah */
+  text-transform: uppercase; /* Mengubah teks menjadi huruf kapital semua */
+  margin-bottom: 20px; /* Memberikan jarak bawah dari elemen berikutnya */
+}
+
+.card-container-wrapper {
+  display: flex;
+  justify-content: center; /* Memusatkan kartu secara horizontal */
+  flex-wrap: wrap; /* Membuat kartu membungkus ke baris baru jika ruang tidak cukup */
+  gap: 50px; /* Jarak antar kartu */
+}
+
 .card-container {
-  width: 320px; /* Sedikit memperlebar kartu */
-  margin-left: 20px; /* Menggeser sedikit ke kanan */
-  margin-right: auto; /* Menyisakan ruang di kanan */
+  width: 320px;
+  display: flex;
+  flex-direction: column; /* Agar isi dalam kartu disusun vertikal */
+  justify-content: space-between; /* Tombol di bawah dan isi tersebar */
+  min-height: 500px; /* Tinggi minimum yang sama untuk semua kartu */
+  height: auto; /* Tinggi otomatis */
   overflow: hidden;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow yang lebih jelas */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  border-radius: 10px; /* Menambahkan border radius */
+  border-radius: 10px;
 }
 
 .card-container:hover {
@@ -14,8 +37,11 @@
 }
 
 .card-container img {
-  transform: scale(1.05);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 200px; /* Tentukan tinggi tetap */
+  object-fit: cover; /* Memastikan gambar di-crop agar sesuai dengan dimensi yang diberikan */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   transition: transform 0.3s ease;
 }
 
@@ -23,16 +49,16 @@
   transform: scale(1.1); /* Efek zoom pada gambar saat hover */
 }
 
-.image-container img {
-  overflow: hidden;
-  height: 200px;
-  border-top-left-radius: 10px; /* Agar gambar sesuai dengan sudut kartu */
-  border-top-right-radius: 10px;
-}
-
 .card-content {
   padding: 1rem;
-  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column; /* Mengatur konten agar vertikal */
+  justify-content: space-between; /* Menyebarkan isi dan tombol */
+  flex-grow: 1; /* Membuat konten mengisi ruang kosong */
+}
+
+.card-content h3 {
+  margin-bottom: 15px; /* Memberikan jarak antara judul dan deskripsi di bawahnya */
 }
 
 h3,
@@ -41,13 +67,10 @@ p {
   padding: 0;
 }
 
-.card-title {
-  margin-bottom: 0.5rem;
-}
-
 .btn {
   display: flex;
   justify-content: center;
+  margin-top: auto; /* Memastikan tombol berada di bawah */
 }
 
 .btn button {
@@ -71,6 +94,6 @@ a {
 }
 
 a:hover {
-  color: plum; /* Tetap warna aqua saat hover */
+  color: plum; /* Tetap warna plum saat hover */
   text-decoration: underline; /* Memberikan underline saat hover */
 }
